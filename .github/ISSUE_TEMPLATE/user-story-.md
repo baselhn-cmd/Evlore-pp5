@@ -9,6 +9,12 @@ assignees: ''
 
 As a **role** I can **capability** so that **received benefit**
 
+> **Tasks:**
+> 
+> * []  Identify existing bugs through testing.
+> * []  Prioritize and fix the bugs.
+>
+> 
 - Acceptance criteria 1
 
 - Acceptance criteria 2
