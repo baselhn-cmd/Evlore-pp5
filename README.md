@@ -1,4 +1,4 @@
-![Responsive image here](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/project-image.jpg)
+![Responsive image here](https://github.com/baselhn-cmd/Evlore-pp5)
 
 # Project Description
 This project is developed as my 5th and final portfolio project during my course at Code Institute. It is a e-commerce website. Here you can find nice shop and product to buy. You can register an account for save your information and order history, you can save your favourite products to a personal wishlist, read and write reviews on the products you like or dislike. And of course buy your magical stuff secure and safe with stripe pay system! 
