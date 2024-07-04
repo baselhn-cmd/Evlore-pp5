@@ -11,8 +11,8 @@ As a **role** I can **capability** so that **received benefit**
 
 > **Tasks:**
 > 
-> * []  Identify existing bugs through testing.
-> * []  Prioritize and fix the bugs.
+> * [x]  Identify existing bugs through testing.
+> * [x]  Prioritize and fix the bugs.
 >
 > 
 - Acceptance criteria 1
