@@ -12,14 +12,15 @@
                 <a href="" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
-        </li>
+        </li>>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Product 
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Evlore Pillows</a>
+            <div class="dropdown-menu border-0" aria-labelledby="product-link">
+                <a href="{% url 'products' %}?category=pillow" class="dropdown-item">Pillow Shams</a>
+                <a href="{% url 'products' %}?category=bed" class="dropdown-item">Bed Bundles</a>
             </div>
         </li>
 
@@ -28,7 +29,7 @@
                 Bed &amp; Bath
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Bed &amp; Bath</a>
+                <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item" class="dropdown-item">Bed &amp; Bath</a>
                 <a href="" class="dropdown-item">All Homeware</a>
             </div>
         </li>
