@@ -36,7 +36,7 @@ def cart_contents(request):
                 else:
                     total += quantity * product.price
                 product_count += quantity
-                bag_items.append(
+                cart_items.append(
                     {
                         "item_id": item_id,
                         "quantity": quantity,
