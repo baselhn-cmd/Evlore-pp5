@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
-from .forms import OrderForm
-from cart.contexts import cart_contents
-from products.models import Product
-from .models import Order, OrderLineItem
 
+from .forms import OrderForm
+from .models import Order, OrderLineItem
+from products.models import Product
+from cart.contexts import cart_contents
 
 import stripe
+
 
 
 def checkout(request):
@@ -30,11 +31,7 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
-            order.original_cart = json.dumps(cart)
-            order.save()
+            order = order_form.save()
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -71,15 +68,14 @@ def checkout(request):
                 Please double check your information.')
     else:
         cart = request.session.get('cart', {})
-    if not cart:
-        messages.error(request, "There's nothing in your bag at the moment")
-        return redirect(reverse('products'))
-    
-    current_cart = cart_contents(request)
-    total = current_cart['grand_total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    intent = stripe.PaymentIntent.create(
+        if not cart:
+            messages.error(request, "There's nothing in your bag at the moment")
+            return redirect(reverse('products'))
+        current_cart = cart_contents(request)
+        total = current_cart['grand_total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
     )
