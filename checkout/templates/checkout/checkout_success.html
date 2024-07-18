@@ -58,7 +58,6 @@
                     </div>
     
                     {% for item in order.lineitems.all %}
-    
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
@@ -95,7 +94,6 @@
                     </div>
     
                     {% if order.street_address2 %}
-    
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Address 2</p>
@@ -104,11 +102,9 @@
                             <p class="mb-0">{{ order.street_address1 }}</p>
                         </div>
                     </div>
-    
                     {% endif %}
     
                     {% if order.county %}
-    
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">County</p>
@@ -117,7 +113,6 @@
                             <p class="mb-0">{{ order.county }}</p>
                         </div>
                     </div>
-    
                     {% endif %}
     
                     <div class="row">
@@ -130,7 +125,6 @@
                     </div>
     
                     {% if order.postcode %}
-    
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Postal Code</p>
@@ -139,7 +133,6 @@
                             <p class="mb-0">{{ order.postcode }}</p>
                         </div>
                     </div>
-    
                     {% endif %}
     
                     <div class="row">
