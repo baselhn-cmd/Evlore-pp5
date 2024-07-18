@@ -80,7 +80,6 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
     )
 
-
     order_form = OrderForm()
     
     
