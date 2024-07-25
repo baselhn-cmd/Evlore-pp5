@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +28,9 @@ SECRET_KEY = 'django-insecure-0sisw7_mpt+8x&*q_5+7*u0ycb3&1m^s4&f4eci2y(^2!u%ig6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net',
+                    'evlore-pp5-a96d6c1e75b5.herokuapp.com',
+                    'localhost']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net',  
@@ -126,13 +129,26 @@ WSGI_APPLICATION = 'evlore.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
+# Database
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

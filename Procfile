@@ -1,0 +1,1 @@
+web: gunicorn evlore-pp5.wsgi
