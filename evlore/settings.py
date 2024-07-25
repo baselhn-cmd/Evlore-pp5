@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0sisw7_mpt+8x&*q_5+7*u0ycb3&1m^s4&f4eci2y(^2!u%ig6'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net',
                     'evlore-pp5-a96d6c1e75b5.herokuapp.com',
