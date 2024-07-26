@@ -1,1 +1,1 @@
-web: gunicorn evlore-pp5.wsgi
+web: gunicorn evlore-pp5.wsgi:application
