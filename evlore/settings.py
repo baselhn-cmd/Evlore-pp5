@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ['8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net
                     'localhost']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net',  
+    'https://evlore-pp5-a96d6c1e75b5.herokuapp.com',  
 ]
 # Application definition
 
