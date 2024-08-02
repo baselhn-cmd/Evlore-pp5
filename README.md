@@ -2,7 +2,7 @@
 
 ![Am I Responsive]()
 
-**Developer: Arron Beale**
+**Developer: Basel Hussein**
 
 💻 [Visit live website](https://evlore-pp5-a96d6c1e75b5.herokuapp.com/)  
 (Ctrl + click to open in new tab)
