@@ -1,6 +1,6 @@
 # eCommerce: Teetime
 
-![Am I Responsive](https://raw.githubusercontent.com/ArronBeale/CI_PP5_tee_time/main/docs/responsive.PNG)
+![Am I Responsive]()
 
 **Developer: Arron Beale**
 
