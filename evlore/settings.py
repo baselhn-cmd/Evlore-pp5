@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net',
                     'evlore-pp5-a96d6c1e75b5.herokuapp.com',
