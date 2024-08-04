@@ -108,3 +108,12 @@ def edit_product(request, product_id):
         'product': product,
     }
     return render(request, 'products/edit_product.html', context)
+
+def delete_product(request, product_id):
+    """
+    Allow staff or superusers to delete a product from the store.
+    """
+    product = get_object_or_404(Product, id=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted successfully!')
+    return redirect('add_product')
