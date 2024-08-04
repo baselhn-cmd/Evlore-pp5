@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net',
                     'evlore-pp5-a96d6c1e75b5.herokuapp.com',
@@ -242,6 +242,6 @@ else:
     EMAIL_PORT = 587
     EMAIL_HOST = "smtp.gmail.com"
     EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
+    EMAIL_HOST_PASS = os.environ.get("EMAIL_HOST_PASS")
     DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
 
