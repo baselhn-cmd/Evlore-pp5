@@ -71,12 +71,21 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
-def add_product(request):
-    """ Add a product to store """
-    form = ProductForm()
-    template ='products/add_product.html'
-    context = {
-        'form': form,
-    }
 
-    return render(request, template, context)
+
+def add_product(request):
+    """
+    Allow staff or superusers to add a new product to the store.
+    """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('products')
+    else:
+        form = ProductForm()
+    # simply to query all products for now, till full CRUD is checked
+    products = Product.objects.all()
+    return render(
+        request, 'products/add_product.html', {
+            'form': form, 'products': products})
