@@ -1,57 +1,3 @@
-Skip to main content
-Code Institute Home PageCodeInstitute: EA101
-Building an E-Commerce Platform
-Dashboard for:cv98@windowslive.com 
-Code Institute Logo
-PROGRAMME OVERVIEW
-STUDENT SUPPORT
-GO TO YOUR CLOUD IDE
-SLACK
-Project - Boutique Ado  Code Refactoring  Adding a custom 404 page
-Search in Module
-Previous
-Next 
-video Base CSS, Login & Registration Refactor 
-video Shopping Bag Refactor 
-video Flake8 & Python Refactoring 
-other Adding a custom 404 page 
-other Now that we're done 
-other End of Module Feedback 
-Adding a custom 404 page
-Bookmark this page
-Adding a custom 404 page
-For your e-commerce applications project, you will need to add a custom 404 page, which displays when a user tries to access a URL that does not exist in your application.
-
-To add a custom 404 page to the completed Boutique Ado walkthrough project, please follow the steps below.
-
-Your finished 404 page will look like this:
-
-A screenshot of the Boutique Ado 404 page
-
-Create your 404 handler function
-In the app: boutique_ado, create a new file called views.py
-Inside the views.py file, first import the render function from django.shortcuts
-from django.shortcuts import render
-In the same file, paste in the code below to create your 404 page handler:
-def handler404(request, exception):
-    """ Error Handler 404 - Page Not Found """
-    return render(request, "errors/404.html", status=404)
-
-This function will load an HTML file called 404.html whenever a user tries to access a URL that does not exist. (You will create the 404.html file soon).
-
-Configure your handler URL
-Open the urls.py file in the boutique_ado app
-At the top of the file, import the handler404 handler function from the views file:
-from .views import handler404
-At the very bottom of the file, after the very last line, create a variable called handler404 and set it to a string that indicates the location of the 404 handler function you created in the views file:
-handler404 = 'boutique_ado.views.handler404'
-
-Django knows to automatically look for this handler404 variable and uses it to find and call the handler404 function when a user tries to navigate to a URL that does not exist.
-
-Create your 404.html file
-In the main templates/ directory, create a folder called: errors
-Inside the errors folder, create a file called 404.html
-The 404.html template code:
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
@@ -78,17 +24,3 @@ The 404.html template code:
         </div>
     </div>
 {% endblock %}
-
-Test your error page works:
-Commit all your changes and push them to the deployed version of your application on Heroku.
-Load your deployed application on Heroku.
-Change the URL to any broken URL path. For example: /test
-NOTE: You will not be able to test your custom 404 page on a local hosted version because of the way it is set up.
-
-For more information, please consult the Django 3.2 documentation on the 404 exception as well as customising and testing other error views.
-
-This unit left me feeling:
-GreatGoodOKBelow averageBad
-Previous
-Next 
-AboutTerms and ConditionsPrivacy PolicyPlagiarism PolicyFAQ© 2024 Code Institute.
