@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /admin/
+Disallow: /profiles/
+Sitemap: https://evlore-pp5-a96d6c1e75b5.herokuapp.com/sitemap.xml
