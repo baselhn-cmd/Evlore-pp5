@@ -409,3 +409,240 @@ I have used meta tags in the HTML of my web app's pages to optimize them for sea
 The W3C Markup Validation Service was used to validate the HTML of the website.  
 
 ### Home  
+
+
+
+### Cart
+
+### Checkout 
+
+### Checkout Success  
+
+### Profile  
+
+### Sign In 
+
+### Sign Out  
+
+### Register  
+
+
+### 404  
+
+##### Back to [top](#table-of-contents)<hr>  
+
+### CSS Validation
+
+### JavaScript Validation
+
+##### Back to [top](#table-of-contents)<hr>  
+
+## PEP8 Validation
+
+##### Back to [top](#table-of-contents)<hr>  
+
+## Testing
+
+- Manual testing User Stories
+
+
+### Manual testing
+
+1.	As A/AN Shopper / Site User	I CAN register for an account	SO THAT I CAN have an account and view my profile  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Sign Up | Click pofile button and select register, user is brought to the sign up page| User is brought to the sign up page | Works as expected  
+
+2.	As A/AN Shopper / Site User	I CAN login and logout SO THAT I CAN have an account with my information stored for fast usage  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Sign In | Click pofile button and select login, user is brought to the sign in page | User is brought to the sign in page | Works as expected  
+
+
+3.	As A/AN Shopper / Site User	I CAN recover my password	SO THAT I CAN set a new password if I forgot it  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Reset Password | Click pofile button and select login, user is brought to the sign in page, click forgot password to go to password reset page | User is brought to password reset page | Works as expected
+
+4.	As A/AN Shopper / Site User	I CAN receive an email confirmation after registration	SO THAT I CAN be notified registration was successful  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Registration | Upon registration an email is sent to verify the email address submitted | Registration email arrives into inbox of the email address used to sign up | Works as expected
+
+5.	As A/AN Shopper / Site User	I CAN have a profile SO THAT I CAN store my information for faster checkouts in the future  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Profile | From the Nav click the profile icon, select profile from dropdown and be broought to the profile page where user information is stored | Be brought to profile page | Works as expected
+
+6.	As A/AN Shopper / Site User	I CAN navigate across the site 	SO THAT I CAN can access all parts of the site  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Navbar | Click on any link in the navbar to be brought to a relevant page, shop for example | Be brought to shop to view all products after clicking all products in the navbar | Works as expected
+
+7.	As A/AN Shopper / Site User	I CAN use a navbar, footer, and social icons  SO THAT I CAN navigate the site, access menus, and access socials  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Navbar/Footer | Scoll to footer, click on the Instagram logo | A new tab will open and bring user to the Teetime Instagram page | Works as expected
+
+8.	As A/AN Shopper / Site User	I CAN be notified of my actions	SO THAT I CAN be aware the action was completed successfully or not  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Alert Box | Add an item from the shop to the basket | A message will appear in the alert box on screen to notify the user of this action | Works as expected 
+
+9.	As A/AN Shopper / Site User	I CAN see my login status	SO THAT I CAN know if I am logged in or not  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Navigation | While logged out the profile icon in the navbar will be gray, log in it will change to a green color | Once logged in the profile icon will be green | Works as expected  
+
+10.	As A/AN Shopper / Site User	I CAN visit the shop SO THAT I CAN view all products available  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Shop | Click shop in the navbar, select all products | User is then brought to the all products page of the shop | Works as expected
+
+11.	As A/AN Shopper / Site User	I CAN view my cart and total cost at any time	so I am aware of what I am buying and it's cost  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Cart| Click the cart icon in the navbar | User is brought to the cart page where all products in cart are displayed along with their price and total cost | Works as expected
+
+12.	As A/AN Shopper / Site User	I CAN view a list of products	SO THAT I CAN select a product to purchase  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Categories | Select a category on the side panel   |     User is brought to the selected category of product and all products are listed | Works as expected
+
+13.	As A/AN Shopper / Site User	I CAN view an individual product details SO THAT I CAN view a more detailed view of the product  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Product Detail | Click on any item image in the shop, or the view button     |  User is borught to the product detail page where product details are displayed | Works as expected  
+
+14.	As A/AN Shopper / Site User	I CAN see my search results	SO THAT I CAN only see what I am searching for  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Search | Input a keyword into the search box in the navbar and click search | All items matching the search critearia are only displayed | Works as expected
+
+15.	As A/AN Shopper / Site User	I CAN sort by category SO THAT I CAN select products of a certain category  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Sort | From the shop page, click a category on the side panel such as headwear | User is brought to the headwear page where only products classed as headwear are displayed | Works as expected  
+
+16.	As A/AN Shopper / Site User	I CAN sort by price low to high and high to low	SO THAT I CAN view products according to my budget 
+ 
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Sort | From the shop page, click the sort box and select price from high to low | All items will be sorted from the highest price to the lowest price | Works as expected  
+
+17. As A/AN Shopper / Site User	I CAN use a card as the payment method SO THAT I CAN complete my purchase  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Checkout | From the basket select secure checkout | Input user information, input card number 4242 4242 4242 4242 04/24 424 24242, payment is successful | Works as expected 
+
+18. As A/AN Shopper / Site User	I CAN view items in my basket	SO THAT I CAN be aware of what I am buying and it's cost  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Cart | Click the basket icon in the navbar | The Cart page will appear and display all items in the basket and their cost alongside total price for all items | Works as expected  
+
+19. As A/AN Shopper / Site User	I CAN receive order confirmation SO THAT I CAN be notified of a successful order  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Alert Box | Upon a successful checkout an alert box will be visible to the user | Alert box pops up with the order details | Works as expected 
+
+20. As A/AN Shopper / Site User	I CAN receive email confirmation SO THAT I CAN have a record of my purchased28	Store Owner / Admin	add a product	add new products to the shop  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Email Confirmation | Upon a successful checkout a confirmation email will be sent to the provided email address which contains the details of the order |     Email confirmation arrives into inbox | Works as expected
+
+21. As A/AN Store Owner / Admin	I CAN add a product SO THAT I CAN add new products to the shop  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Add Product | From the navbar select the profile button as an admin logged in, click add product from the dropdown | The add product page will appear allowing the addition of a new product via the add product form | Works as expected  
+
+
+22. As A/AN Store Owner / Admin	I CAN edit a product SO THAT I CAN edit existing products in the shop  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Edit Product | From product detail as an admin account, find a edit button on the page, click edit | Admin is brought to the edit product page where they can adjust any part of the product | Works as expected
+
+23. As A/AN Store Owner / Admin	I CAN delete a product SO THAT I CAN delete existing products from the shop  
+
+| Feature | Action | Expected Result | Actual Result |
+| ------- | ------ | --------------- | ------------- |
+| Delete Product  | From product detail as an admin account, find a delete button on the page, click delete | A modal pops up and asks the admin to confirm they wish to delete the product | Works as expected |
+
+## Bugs
+**Bug:** You can change the html file in product detail and change the maximun number of product to add in cart. It will cause an 500 server error in checkout because it's only allowed to add a maximun of 99 of a product.  
+**Fix:** I need to fix this but for now there is left like this because I don't have the time to solve it, but I know it's there.
+
+**Bug:** I had some problem with main nav and mobile-nav includes. There where a duplication of an ID in the search dropdown.  
+**Fix:** Solve this by removed the ID from the base and gave it an uniqe ID so there was no duplication that gave problem.
+
+**Bug:** When user had add a review there was an delete option on every review, even if the user had not write it by themself.  
+**Fix:** Add a if statement with the request user and it solved it.
+
+**Bug:** When a user had add a product to wishlist, there was shown a filled star at the product page on that product. Adn empty stars at the other product. But if a user added more products to wishlist, there added a star, so if the user had ad three product threr where shown three stars in product page beside the product name.  
+**Fix:** I had an else statement that ruined it. When i removed the else statement there was only one filled star that showed on the products that the user had added. And on the rest of the product there is no star at all.   
+
+## Deployment
+To deploy my project, I had to use the Code Institute Python Essentials Template with all the neccesserely code for this project to work woth Django. With that template I create a repository in Github where i start my project.
+And then open it and work with it at Gitpod workspaces.
+It is important to open the same workspace everytime you have to work with it and to do that and secure it's being saved, you have to pin it in your workspace dashboard at gitpod.
+When you want to save your work you need to write the commands in the terminal of your workspace: ***git add .*** , ***git commit -m "commit message"*** and then push it to github with ***git push***. To publish it and store it in your Github repositry.
+
+* Then i want to deploy it at heroku, I am using my account on Heroku, if you doesnt have an account you will register first before deploying and then create a project in heroku. 
+* Create a Procfile in your project, this required that specifies the commands that are executed by the app on startup.
+
+  * Click the New dropdown and select Create New App.
+  * Create a name to your project and it has to be uniqe.
+  * Select the region you are working in, in my case Europe
+  * Heroku Settings You will need to set your Environment Variables and this is importat to ensure your application is deployed properly.
+  * In settings click "Reveal Config Vars" and set the variables that you need. Like the secret keys for stripe and aws in my case and a development key for deploy when i am working with the project.
+  * connect your github repository with your heroku project in settings and connect with github.
+  * Deploy your branch automatic or manually. At first the automatic deployment creats every time you push your code to github. But in the middle of the project heroku change the way and you had to save it via the heroku CLI and i was using the terminal to push it to heroku. with this steps:
+  1. Write heroku login -i in terminal on your workspace.
+  2. add your email and then password to heroku 
+  3. Write heroku apps, to get all of your heroku apps
+  4. Write heroku git:remote -a < appname >
+  5. the gut add . , git commit -m "message", git push origin main.
+  5. and the last step is "git push heroku main"
+
+After this you have create a workspace and deployed your project to github and heroku!
+
+##### Back to [top](#table-of-contents)<hr>
+
+
+## Credits
+
+### Code  
+- Code Institute for the bag and checkout app as a basis for my checkout and basket apps
+- Code Institute Slack community for guidance on many of my bug fixes.
+
+### Media
+[Pexels](https://www.pexels.com/)
+
+##### Back to [top](#table-of-contents)<hr>
+
+## Acknowledgements
+
+### Special thanks to the following:
+- My Mentor Mo Shami  
+- Code Institute Slack Community
+- Code Institute Tutor Support

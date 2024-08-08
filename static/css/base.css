@@ -255,7 +255,7 @@ input[name='q']::placeholder {
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
-    border-color: #dc3545;
+    border-color: #dc3545 ;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
