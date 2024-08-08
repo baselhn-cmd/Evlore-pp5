@@ -14,7 +14,6 @@
      - [Market Analysis](#market-analysis)
      - [Marketing and Sales Strategy](#marketing-and-sales-strategy)
      - [Operations and Management](#operations-and-management)
-     - [Financial Plan](#financial-plan)
      - [Conclusion](#conclusion)
   - [Marketing](#marketing)
      - [Social Media](#social-media)
@@ -59,10 +58,6 @@ Evlore Pillow Shop primarily targets adults aged 25-55 who are conscious of thei
 The focus is on urban and suburban areas in the United States where there is a higher disposable income and a tendency to invest in home and wellness products
 ### Operations and Management:
 Evlore will be operated and managed by a small team of experienced professionals. The team will consist of a CEO, CTO, and marketing and sales staff.
-#### Financial Plan:
-
-- Online Store: The primary sales channel is the e-commerce website, offering a seamless shopping experience with detailed product descriptions, customer reviews, and easy checkout.
-- Social Media: Platforms like Instagram, Facebook, and Pinterest will be leveraged for brand promotion, product showcases, and direct sales through shoppable posts.
 
 ### Conclusion:
 
@@ -73,8 +68,12 @@ The pillow market presents a lucrative opportunity for Evlore Pillow Shop, espec
 ## Marketing  
 
 ### Social Media 
+- Online Store: The primary sales channel is the e-commerce website, offering a seamless shopping experience with detailed product descriptions, customer reviews, and easy checkout.
+- Social Media: Platforms like Instagram, Facebook, and Pinterest will be leveraged for brand promotion, product showcases, and direct sales through shoppable posts.
+[Facebook](hhttps://www.facebook.com/profile.php?id=61563967860716) 
 
 ### Mailing List  
+Evlore Shope  uses Mailchimp to manage its mailing list. By joining the mailing list, users will receive updates on new features, upcoming events, and exclusive promotions. The process to join the mailing list is simple, users just need to provide their email address on the website, and they will start receiving email updates. 
 
 ## User Goals
 
