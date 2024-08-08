@@ -170,18 +170,36 @@ To find and purchase a high-quality pillow that enhances sleep comfort and suppo
 The color I chose was dark green with a light background.  
 <details><summary>See Color Palette</summary>
 
-![Color Palette]()
+![Color Palette](/media/color(2).png)
 </details>
 
 
 ### Fonts
+
+The font selected was from Google Fonts, Lato.
 
 
 # Structure
 
 ## Website pages
 
-
+- The site consists of the following pages:
+  - Home
+  - product
+  - all products
+  - Product List
+  - Product Expanded
+  - cart
+  - Checkout
+  - Checkout Success
+  - Contact
+  - Register
+  - Profile
+  - Login
+  - Logout
+  - Reset Password
+  - Register
+  - 404
 
 
   ##### Back to [top](#table-of-contents)
@@ -192,6 +210,11 @@ The color I chose was dark green with a light background.
 
 I am using AWS S3 buckets to store my data. S3 is a highly scalable and durable cloud storage service provided by Amazon Web Services. It allows me to easily store and retrieve large amounts of data, and its built-in security features provide added protection for my files. I chose S3 for its scalability, durability, and security features.
 
+![aws bucket](/media/aws2.png)
+![aws media](/media/aws1.png)
+![aws static](/media/aws3.png)
+</details>
+<hr>
 
 
 ## Database
@@ -204,9 +227,7 @@ I built my database using PostgreSQL. It's a powerful and open-source object-rel
 
 - [Am I Responsive](http://ami.responsivedesign.is/)
 - [Balsamiq](https://balsamiq.com/)
-- [Bootstrap v5.2](https://getbootstrap.com/)
-- [Cloudinary](https://cloudinary.com/)
-- [Favicon.io](https://favicon.io)
+- [Bootstrap v4.6](https://getbootstrap.com/)
 - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/)
 - [Font Awesome](https://fontawesome.com/)
 - [Git](https://git-scm.com/)
