@@ -216,11 +216,72 @@ I am using AWS S3 buckets to store my data. S3 is a highly scalable and durable 
 </details>
 <hr>
 
-
 ## Database
 
 I built my database using PostgreSQL. It's a powerful and open-source object-relational database system that is known for its reliability, robustness, and performance. I chose it because it provides a flexible tool for efficiently managing and organizing my data.
 
+## Models  
+
+### User Model
+
+| Key        | Name         | Type        |
+| ---------- | ------------ | ----------- |
+| PrimaryKey | user_id      | AutoField   |
+|            | password     | VARCHAR(45) |
+|            | last_login   | VARCHAR(45) |
+|            | is_superuser | BOOLEAN     |
+|            | username     | VARCHAR(45) |
+|            | first_name   | VARCHAR(45) |
+|            | last_name    | VARCHAR(45) |
+|            | email        | VARCHAR(45) |
+|            | is_staff     | BOOLEAN     |
+|            |              |             |
+|            | is_active    | BOOLEAN     |
+|            | date_joined  | VARCHAR(45) |
+
+### User Profile Model
+
+| Key        | Name                 | Type          |
+| ---------- | -------------------- | ------------- |
+| PrimaryKey | user_profile_id      | AutoField     |
+| ForeignKey | user                 | User model    |
+|            | default_phone_number | CharField[20] |
+|            | default_address1     | CharField[80] |
+|            | default_address2     | CharField[80] |
+|            | default_town_city    | CharField[40] |
+|            | default_county       | CharField[80] |
+|            | default_postcode     | CharField[20] |
+|            | default_country      | CharField[40] |
+
+### Products Model
+| Title       	| Key in Database 	| Form Validaton 	| Data Type    	|
+|-------------	|-----------------	|----------------	|--------------	|
+| Id          | _id                    |                     | PrimaryKey      |
+| Category    	| category        	| None           	| ForeignKey   	|
+| Sku         	| sku             	| max_length=254 	| CharField    	|
+| Name        	| name            	| max_length=254 	| CharField    	|
+| Description 	| description     	| None           	| TextField    	|
+| Price       	| price           	| max_digits=6   	| DecimalField 	|
+| Image       	| image           	| None           	| ImageField   	|
+| Rating      	| rating          	| max_digits=6   	| DecimalField 	|  
+
+
+
+## Technologies Used
+
+### Languages & Frameworks
+
+- HTML
+- CSS
+- Javascript
+- Python
+- Django
+
+## Features  
+
+
+### Search Engine Optimisation (SEO)
+I have used meta tags in the HTML of my web app's pages to optimize them for search engines. The description tag provides a brief summary of the content on the page, while the keywords tag lists relevant keywords to help search engines understand the content of the webpage and its relevance to related search queries.
 
 
 ### Libraries & Tools
@@ -254,27 +315,21 @@ I built my database using PostgreSQL. It's a powerful and open-source object-rel
 
 ### Search Engine Optimisation (SEO)
 I have used meta tags in the HTML of my web app's pages to optimize them for search engines. The description tag provides a brief summary of the content on the page, while the keywords tag lists relevant keywords to help search engines understand the content of the webpage and its relevance to related search queries.
-
+![seo](/media/seo.png)
 
 ### Home page
 - Home page includes nav bar, main body and a footer.
-
-### Logo
-- A custom logo for the business.
-- User stories covered: 6, 7
-
+![Home](/media/home1.png)
 
 ### Navigation
 - Fully Responsive.
 - On small screens switches to hamburger menu.
 - Indicates login/logout in status.
 - displayed on all pages.  
-- User stories covered: 6, 7
-
+![Nav](/media/nav1.png)
 ### Footer
 - Contains social media links, privacy policy, and copyright.
-- displayed across all pages.  
-- User stories covered: 6, 7
+![Footer](/media/footer.png)
 
 ### Mailing List Sign Up
 - Mailchimp signup for email mailing list.  
