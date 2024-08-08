@@ -365,14 +365,22 @@ I have used meta tags in the HTML of my web app's pages to optimize them for sea
 
 ![search](/media/search.png)
 
+### Basket
+- Allows the user to view the basket with their items.
+- Pops up as items are added and removed.  
+
+![cart](/media/cart.png)
 
 ### Checkout
 - Allows the user to purchase items in their basket.  
 
+![checkout](/media/checkout.png)
+
 
 ### Stripe
 - Allows the user to use stripe for card payments.  
-- User stories covered: 22
+
+![strip](/media/strip.png)
 
 
 ### Email Confirmation
@@ -392,3 +400,12 @@ I have used meta tags in the HTML of my web app's pages to optimize them for sea
 ### Delete Product
 - Allows the user to delete products, includes confirmation prompt before deletion.
 
+##### Back to [top](#table-of-contents)<hr>
+
+# Validation  
+
+## HTML Validation
+
+The W3C Markup Validation Service was used to validate the HTML of the website.  
+
+### Home  
