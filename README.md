@@ -1,6 +1,6 @@
 # eCommerce: Teetime
 
-![Am I Responsive]()
+![Am I Responsive](/media/responsive1.png)
 
 **Developer: Basel Hussein**
 
