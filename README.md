@@ -52,15 +52,21 @@
 This project is developed as my 5th and final portfolio project during my course at Code Institute. It is a e-commerce website. Here you can find nice shop and product to buy. You can register an account for save your information and order history, And of course buy your magical stuff secure and safe with stripe pay system!
 
 ### Market Analysis:
-
+The global pillow market is experiencing steady growth, driven by increasing consumer awareness of the importance of sleep quality and the demand for ergonomic and specialized pillows. As consumers prioritize health and wellness, the bedding industry, particularly pillows, has seen innovation in materials, design, and functionality.
 
 ### Marketing and Sales Strategy:
-
+Evlore Pillow Shop primarily targets adults aged 25-55 who are conscious of their sleep quality and overall well-being.
+The focus is on urban and suburban areas in the United States where there is a higher disposable income and a tendency to invest in home and wellness products
 ### Operations and Management:
-
+Evlore will be operated and managed by a small team of experienced professionals. The team will consist of a CEO, CTO, and marketing and sales staff.
 #### Financial Plan:
 
+- Online Store: The primary sales channel is the e-commerce website, offering a seamless shopping experience with detailed product descriptions, customer reviews, and easy checkout.
+- Social Media: Platforms like Instagram, Facebook, and Pinterest will be leveraged for brand promotion, product showcases, and direct sales through shoppable posts.
+
 ### Conclusion:
+
+The pillow market presents a lucrative opportunity for Evlore Pillow Shop, especially with the growing consumer focus on health and wellness. By carving out a niche in the premium segment with a focus on quality, sustainability, and innovation, Evlore can establish itself as a trusted brand in the competitive pillow market.
 
 ##### Back to [top](#table-of-contents)<hr>
 
