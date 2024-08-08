@@ -76,20 +76,26 @@ The pillow market presents a lucrative opportunity for Evlore Pillow Shop, espec
 Evlore Shope  uses Mailchimp to manage its mailing list. By joining the mailing list, users will receive updates on new features, upcoming events, and exclusive promotions. The process to join the mailing list is simple, users just need to provide their email address on the website, and they will start receiving email updates. 
 
 ## User Goals
-
+To find and purchase a high-quality pillow that enhances sleep comfort and supports overall well-being, tailored to their specific sleep needs.
 
 ## Site Owner Goals
-
+- Increase Online Sales
+- Build Brand Awareness
+- Enhance Customer Satisfaction
+- Drive Repeat Business
 
 
 ## User Experience
 
 ### Target Audience
-
+- Health-Conscious Consumers : Individuals who prioritize their health and wellness, particularly those who understand the importance of good sleep. They are likely to invest in products that promise better sleep quality and overall well-being.
+- Home Decor Enthusiasts : People who take pride in the aesthetics of their home, particularly their bedroom. They are interested in pillows that complement their interior design and add a touch of luxury or style.
+- Gift Buyers : Individuals shopping for special occasions like birthdays, weddings, or holidays. They are looking for premium, thoughtful gifts that convey care and quality.
 
 ### User Requirements and Expectations
-
-
+- Product Quality : Users expect pillows made from high-quality materials that are durable, comfortable, and offer the benefits advertised.
+- Easy Navigation : he website should be intuitive and easy to navigate, allowing users to find products quickly and efficiently.
+- Mobile-Friendly :  Users expect a fully functional mobile version of the website that is easy to use on smartphones and tablets.
 ##### Back to [top](#table-of-contents)<hr>
 
 
@@ -146,7 +152,9 @@ Evlore Shope  uses Mailchimp to manage its mailing list. By joining the mailing 
 
 
 ### Kanban, Epics & User Stories
-
+- GitHub Kanban was used to track all open user stories
+- Epics were created using the milestones feature
+- Backlog, In Progress, Done headings were used in the kanban
 
 
 ##### Back to [top](#table-of-contents)<hr>
@@ -159,7 +167,11 @@ Evlore Shope  uses Mailchimp to manage its mailing list. By joining the mailing 
 ## Design
 
 ### Colors
+The color I chose was dark green with a light background.  
+<details><summary>See Color Palette</summary>
 
+![Color Palette]()
+</details>
 
 
 ### Fonts
