@@ -326,33 +326,48 @@ I have used meta tags in the HTML of my web app's pages to optimize them for sea
 - On small screens switches to hamburger menu.
 - Indicates login/logout in status.
 - displayed on all pages.  
+
 ![Nav](/media/nav1.png)
+
 ### Footer
 - Contains social media links, privacy policy, and copyright.
+
 ![Footer](/media/footer.png)
 
 ### Mailing List Sign Up
 - Mailchimp signup for email mailing list.  
 
+![Email](/media/email.png)
+
 
 ### Sign up / Register
 - Allow users to register an acoount.
-- User stories covered: 1  
+
+![Signup](/media/signup.png)
+
 
 
 ### Sign In
 - User can sign in.  
-- User stories covered: 2
+
+![sigin](/media/signin.png)
 
 
 ### Sign Out
 - Allows the user to securely sign out.
 - Ask user if they are sure they want to sign out.  
-- User stories covered: 2
+
+![signout](/media/signout2.png)
+
+
+### Search
+- Allows the user to search for products.
+
+![search](/media/search.png)
+
 
 ### Checkout
 - Allows the user to purchase items in their basket.  
-- User stories covered: 22, 23, 24, 25
 
 
 ### Stripe
