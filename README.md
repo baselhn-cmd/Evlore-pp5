@@ -159,16 +159,28 @@ I used Balsamiq to create [wireframes](https://moqups.com/) for my project. It's
 <details><summary>Wireframe Home</summary> 
 
 ![Wireframe Home](/media/wire1.png)
+</details>
 
 <details><summary>Wireframe Products</summary>
 
 ![Wireframe Home](/media/wire2.png)
+</details>
+
+<details><summary>Wireframe profile</summary>
+
+![Wireframe profile](/media/wire3.png)
+</details>
+
+<details><summary>Wireframe Product Detail</summary>  
+
+![Product Detail](/media/wire4.png)
+</details> 
 
 
 ## Design
 
 ### Colors
-The color I chose was dark green with a light background.  
+The color I choose is white and violet.  
 <details><summary>See Color Palette</summary>
 
 ![Color Palette](/media/color(2).png)
