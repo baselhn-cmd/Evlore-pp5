@@ -156,9 +156,14 @@ To find and purchase a high-quality pillow that enhances sleep comfort and suppo
 ## Wireframes
 I used Balsamiq to create [wireframes](https://moqups.com/) for my project. It's a user-friendly wireframing tool that enables me to quickly and easily create mockups for my website or application. It offers a wide range of pre-built UI elements, and allows for easy collaboration with my team. I linked a pdf of my wireframes, which you can access it and check it out the design, layout and the flow of the project before implementing it in the real product.  
 
-![Wireframe Home](/media/wireframe1.png)
+<details><summary>Wireframe Home</summary> 
 
-![Wireframe mobile](/media/wireframe2.png)
+![Wireframe Home](/media/wire1.png)
+
+<details><summary>Wireframe Products</summary>
+
+![Wireframe Home](/media/wire2.png)
+
 
 ## Design
 
