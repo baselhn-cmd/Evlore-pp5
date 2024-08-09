@@ -183,7 +183,7 @@ I used Balsamiq to create [wireframes](https://moqups.com/) for my project. It's
 The color I choose is white and violet.  
 <details><summary>See Color Palette</summary>
 
-![Color Palette](/media/color(2).png)
+![Color Palette](/media/color99.png)
 </details>
 
 
