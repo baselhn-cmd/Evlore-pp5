@@ -697,7 +697,13 @@ After this you have create a workspace and deployed your project to github and h
 
 ### Media
 
-[Pexels](https://www.pexels.com/)
+- Insparation Websites :
+
+[them](https://themewagon.github.io/pillowmart/single-product.html)
+
+- The Boutique Ado project 
+
+[Boutique Ado](https://github.com/mkthewlis/boutique-ado)
 
 
 ##### Back to [top](#table-of-contents)<hr>
