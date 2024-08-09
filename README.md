@@ -201,7 +201,7 @@ The font selected was from Google Fonts, Lato.
   - product
   - all products
   - Product List
-  - Product Expanded
+  -Pillow Shams
   - cart
   - Checkout
   - Checkout Success
@@ -290,12 +290,6 @@ I built my database using PostgreSQL. It's a powerful and open-source object-rel
 - Python
 - Django
 
-## Features  
-
-
-### Search Engine Optimisation (SEO)
-I have used meta tags in the HTML of my web app's pages to optimize them for search engines. The description tag provides a brief summary of the content on the page, while the keywords tag lists relevant keywords to help search engines understand the content of the webpage and its relevance to related search queries.
-
 
 ### Libraries & Tools
 
@@ -328,11 +322,19 @@ I have used meta tags in the HTML of my web app's pages to optimize them for sea
 
 ### Search Engine Optimisation (SEO)
 I have used meta tags in the HTML of my web app's pages to optimize them for search engines. The description tag provides a brief summary of the content on the page, while the keywords tag lists relevant keywords to help search engines understand the content of the webpage and its relevance to related search queries.
+
+<details><summary>See feature image</summary>
+
 ![seo](/media/seo.png)
+</details>  
 
 ### Home page
 - Home page includes nav bar, main body and a footer.
+
+<details><summary>See feature images</summary>
+
 ![Home](/media/home1.png)
+</details> 
 
 ### Navigation
 - Fully Responsive.
@@ -340,60 +342,88 @@ I have used meta tags in the HTML of my web app's pages to optimize them for sea
 - Indicates login/logout in status.
 - displayed on all pages.  
 
+<details><summary>See feature images</summary>
+
 ![Nav](/media/nav1.png)
+</details>  
+
 
 ### Footer
 - Contains social media links, privacy policy, and copyright.
 
+<details><summary>See feature images</summary>
+
 ![Footer](/media/footer.png)
+</details>  
 
 ### Mailing List Sign Up
 - Mailchimp signup for email mailing list.  
 
-![Email](/media/email.png)
+<details><summary>See feature images</summary>
 
+![Email](/media/email.png)
+</details>
 
 ### Sign up / Register
 - Allow users to register an acoount.
 
-![Signup](/media/signup.png)
+<details><summary>See feature images</summary>
 
+![Signup](/media/signup.png)
+</details>
 
 
 ### Sign In
 - User can sign in.  
 
+<details><summary>See feature images</summary>
+
 ![sigin](/media/signin.png)
+</details>
 
 
 ### Sign Out
 - Allows the user to securely sign out.
 - Ask user if they are sure they want to sign out.  
 
-![signout](/media/signout2.png)
+<details><summary>See feature images</summary>
 
+![signout](/media/signout2.png)
+</details>
 
 ### Search
 - Allows the user to search for products.
 
+<details><summary>See feature images</summary>
+
 ![search](/media/search.png)
+</details>
 
 ### Basket
 - Allows the user to view the basket with their items.
 - Pops up as items are added and removed.  
 
+<details><summary>See feature images</summary>
+
 ![cart](/media/cart.png)
+</details>
 
 ### Checkout
 - Allows the user to purchase items in their basket.  
 
+<details><summary>See feature images</summary>
+
 ![checkout](/media/checkout.png)
+</details>
 
 
 ### Stripe
 - Allows the user to use stripe for card payments.  
 
+<details><summary>See feature images</summary>
+
 ![strip](/media/strip.png)
+</details>
 
 
 ### Email Confirmation
@@ -426,7 +456,10 @@ The HTML code for the project was validated using the [W3C HTML Validator.](http
 
 ### CSS Validation
 
+<details><summary>See feature images</summary>
+
 ![css](/media/css.png)
+</details>
 
 ### JavaScript Validation
 
@@ -631,7 +664,9 @@ After this you have create a workspace and deployed your project to github and h
 - Code Institute Slack community for guidance on many of my bug fixes.
 
 ### Media
+
 [Pexels](https://www.pexels.com/)
+
 
 ##### Back to [top](#table-of-contents)<hr>
 
