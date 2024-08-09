@@ -658,9 +658,6 @@ JSHint javaScript Validation Service was used to validate all javaScript files.
 **Bug:** When user had add a review there was an delete option on every review, even if the user had not write it by themself.  
 **Fix:** Add a if statement with the request user and it solved it.
 
-**Bug:** When a user had add a product to wishlist, there was shown a filled star at the product page on that product. Adn empty stars at the other product. But if a user added more products to wishlist, there added a star, so if the user had ad three product threr where shown three stars in product page beside the product name.  
-**Fix:** I had an else statement that ruined it. When i removed the else statement there was only one filled star that showed on the products that the user had added. And on the rest of the product there is no star at all.   
-
 ## Deployment
 To deploy my project, I had to use the Code Institute Python Essentials Template with all the neccesserely code for this project to work woth Django. With that template I create a repository in Github where i start my project.
 And then open it and work with it at Gitpod workspaces.
