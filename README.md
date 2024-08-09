@@ -433,9 +433,19 @@ I have used meta tags in the HTML of my web app's pages to optimize them for sea
 ### Profile
 - Allows the user to update their information and see their order history.  
 
+<details><summary>See feature images</summary>
+
+![strip](/media/profil99.png)
+</details>
+
 
 ### Add Product
 - Allows the Admin to add new products.
+
+<details><summary>See feature images</summary>
+
+![strip](/media/add.png)
+</details>
 
 ### Edit Product
 - Allows the user to edit the products. 
@@ -462,10 +472,32 @@ The HTML code for the project was validated using the [W3C HTML Validator.](http
 </details>
 
 ### JavaScript Validation
+JSHint javaScript Validation Service was used to validate all javaScript files.
+
+<details><summary>stripe_elements.js</summary>
+
+![jshint](/media/jshint1%20(2).png)
+</details>  
+
+<details><summary>country_field.js</summary>
+
+![jshint2](/media/jshint2%20(2).png)
+</details>
+
 
 ##### Back to [top](#table-of-contents)<hr>  
 
 ## PEP8 Validation
+
+[CI Python Linter](https://pep8ci.herokuapp.com/) was used to check the code for PEP8 requirements.
+
+<summary>PEP8</summary>
+
+<details><summary>Python</summary>
+
+![pep8](/media/pep8.png)
+</details>
+
 
 ##### Back to [top](#table-of-contents)<hr>  
 
@@ -476,122 +508,122 @@ The HTML code for the project was validated using the [W3C HTML Validator.](http
 
 ### Manual testing
 
-1.	As A/AN Shopper / Site User	I CAN register for an account	SO THAT I CAN have an account and view my profile  
+1.	As A/AN Customer / Site User	I CAN register for an account	SO THAT I CAN have an account and view my profile  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Sign Up | Click pofile button and select register, user is brought to the sign up page| User is brought to the sign up page | Works as expected  
 
-2.	As A/AN Shopper / Site User	I CAN login and logout SO THAT I CAN have an account with my information stored for fast usage  
+2.	As A/AN Customer / Site User	I CAN login and logout SO THAT I CAN have an account with my information stored for fast usage  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Sign In | Click pofile button and select login, user is brought to the sign in page | User is brought to the sign in page | Works as expected  
 
 
-3.	As A/AN Shopper / Site User	I CAN recover my password	SO THAT I CAN set a new password if I forgot it  
+3.	As A/AN Customer / Site User	I CAN recover my password	SO THAT I CAN set a new password if I forgot it  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Reset Password | Click pofile button and select login, user is brought to the sign in page, click forgot password to go to password reset page | User is brought to password reset page | Works as expected
 
-4.	As A/AN Shopper / Site User	I CAN receive an email confirmation after registration	SO THAT I CAN be notified registration was successful  
+4.	As A/AN Customer / Site User	I CAN receive an email confirmation after registration	SO THAT I CAN be notified registration was successful  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Registration | Upon registration an email is sent to verify the email address submitted | Registration email arrives into inbox of the email address used to sign up | Works as expected
 
-5.	As A/AN Shopper / Site User	I CAN have a profile SO THAT I CAN store my information for faster checkouts in the future  
+5.	As A/AN Customer / Site User	I CAN have a profile SO THAT I CAN store my information for faster checkouts in the future  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Profile | From the Nav click the profile icon, select profile from dropdown and be broought to the profile page where user information is stored | Be brought to profile page | Works as expected
 
-6.	As A/AN Shopper / Site User	I CAN navigate across the site 	SO THAT I CAN can access all parts of the site  
+6.	As A/AN Customer / Site User	I CAN navigate across the site 	SO THAT I CAN can access all parts of the site  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Navbar | Click on any link in the navbar to be brought to a relevant page, shop for example | Be brought to shop to view all products after clicking all products in the navbar | Works as expected
 
-7.	As A/AN Shopper / Site User	I CAN use a navbar, footer, and social icons  SO THAT I CAN navigate the site, access menus, and access socials  
+7.	As A/AN Customer/ Site User	I CAN use a navbar, footer, and social icons  SO THAT I CAN navigate the site, access menus, and access socials  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
-| Navbar/Footer | Scoll to footer, click on the Instagram logo | A new tab will open and bring user to the Teetime Instagram page | Works as expected
+| Navbar/Footer | Scoll to footer, click on the Facebook logo | A new tab will open and bring user to the facebook page | Works as expected
 
-8.	As A/AN Shopper / Site User	I CAN be notified of my actions	SO THAT I CAN be aware the action was completed successfully or not  
+8.	As A/AN Customer / Site User	I CAN be notified of my actions	SO THAT I CAN be aware the action was completed successfully or not  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Alert Box | Add an item from the shop to the basket | A message will appear in the alert box on screen to notify the user of this action | Works as expected 
 
-9.	As A/AN Shopper / Site User	I CAN see my login status	SO THAT I CAN know if I am logged in or not  
+9.	As A/AN Customer / Site User	I CAN see my login status	SO THAT I CAN know if I am logged in or not  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Navigation | While logged out the profile icon in the navbar will be gray, log in it will change to a green color | Once logged in the profile icon will be green | Works as expected  
 
-10.	As A/AN Shopper / Site User	I CAN visit the shop SO THAT I CAN view all products available  
+10.	As A/AN Customer/ Site User	I CAN visit the shop SO THAT I CAN view all products available  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Shop | Click shop in the navbar, select all products | User is then brought to the all products page of the shop | Works as expected
 
-11.	As A/AN Shopper / Site User	I CAN view my cart and total cost at any time	so I am aware of what I am buying and it's cost  
+11.	As A/AN Customer / Site User	I CAN view my cart and total cost at any time	so I am aware of what I am buying and it's cost  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Cart| Click the cart icon in the navbar | User is brought to the cart page where all products in cart are displayed along with their price and total cost | Works as expected
 
-12.	As A/AN Shopper / Site User	I CAN view a list of products	SO THAT I CAN select a product to purchase  
+12.	As A/AN Customer / Site User	I CAN view a list of products	SO THAT I CAN select a product to purchase  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Categories | Select a category on the side panel   |     User is brought to the selected category of product and all products are listed | Works as expected
 
-13.	As A/AN Shopper / Site User	I CAN view an individual product details SO THAT I CAN view a more detailed view of the product  
+13.	As A/AN Customer / Site User	I CAN view an individual product details SO THAT I CAN view a more detailed view of the product  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Product Detail | Click on any item image in the shop, or the view button     |  User is borught to the product detail page where product details are displayed | Works as expected  
 
-14.	As A/AN Shopper / Site User	I CAN see my search results	SO THAT I CAN only see what I am searching for  
+14.	As A/AN Customer / Site User	I CAN see my search results	SO THAT I CAN only see what I am searching for  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Search | Input a keyword into the search box in the navbar and click search | All items matching the search critearia are only displayed | Works as expected
 
-15.	As A/AN Shopper / Site User	I CAN sort by category SO THAT I CAN select products of a certain category  
+15.	As A/AN Customer / Site User	I CAN sort by category SO THAT I CAN select products of a certain category  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Sort | From the shop page, click a category on the side panel such as headwear | User is brought to the headwear page where only products classed as headwear are displayed | Works as expected  
 
-16.	As A/AN Shopper / Site User	I CAN sort by price low to high and high to low	SO THAT I CAN view products according to my budget 
+16.	As A/AN Customer / Site User	I CAN sort by price low to high and high to low	SO THAT I CAN view products according to my budget 
  
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Sort | From the shop page, click the sort box and select price from high to low | All items will be sorted from the highest price to the lowest price | Works as expected  
 
-17. As A/AN Shopper / Site User	I CAN use a card as the payment method SO THAT I CAN complete my purchase  
+17. As A/AN Customer / Site User	I CAN use a card as the payment method SO THAT I CAN complete my purchase  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
-| Checkout | From the basket select secure checkout | Input user information, input card number 4242 4242 4242 4242 04/24 424 24242, payment is successful | Works as expected 
+| Checkout | From the cart select secure checkout | Input user information, input card number 4242 4242 4242 4242 04/24 424 24242, payment is successful | Works as expected 
 
-18. As A/AN Shopper / Site User	I CAN view items in my basket	SO THAT I CAN be aware of what I am buying and it's cost  
+18. As A/AN Customer / Site User	I CAN view items in my cart	SO THAT I CAN be aware of what I am buying and it's cost  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
-| Cart | Click the basket icon in the navbar | The Cart page will appear and display all items in the basket and their cost alongside total price for all items | Works as expected  
+| Cart | Click the cart icon in the navbar | The Cart page will appear and display all items in the cart and their cost alongside total price for all items | Works as expected  
 
-19. As A/AN Shopper / Site User	I CAN receive order confirmation SO THAT I CAN be notified of a successful order  
+19. As A/AN Customer / Site User	I CAN receive order confirmation SO THAT I CAN be notified of a successful order  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
 | Alert Box | Upon a successful checkout an alert box will be visible to the user | Alert box pops up with the order details | Works as expected 
 
-20. As A/AN Shopper / Site User	I CAN receive email confirmation SO THAT I CAN have a record of my purchased28	Store Owner / Admin	add a product	add new products to the shop  
+20. As A/AN Customer / Site User	I CAN receive email confirmation SO THAT I CAN have a record of my purchased28	Store Owner / Admin	add a product	add new products to the shop  
 
 | Feature | Action | Expected Result | Actual Result |
 | ------- | ------ | --------------- | ------------- |
