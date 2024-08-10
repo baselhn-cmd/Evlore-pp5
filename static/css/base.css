@@ -6,7 +6,7 @@ body {
     background: url('/media/Untitled\ design\ \(24\).png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #6247aa ;
+    color: #333;
     font-family: 'Lato';
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 .shop-now-button {
-    background: #b66bb0 ;
+    background: #64095a ;
     color: white;
     min-width: 260px;
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .text-black {
-    color: #B08EAD !important;
+    color: #3b046e !important;
 }
 
 .border-black {
