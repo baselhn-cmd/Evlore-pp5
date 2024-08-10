@@ -40,8 +40,8 @@ body {
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; 
+    background: #10002B;
+    color: #E0AAFF !important; 
     border: 1px solid black;
 }
 

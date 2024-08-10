@@ -115,11 +115,6 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free Shipping ${{ free_shipping_threshold }}!</h4>                
-            </div>            
-        </div>
     </header>
 
     {% if messages %}
@@ -180,7 +175,8 @@
                         <p class="pt-2">
                         <strong>Sign up for our newsletter</strong>
                         <div id="mc_embed_signup">
-                            <form action="https://herokuapp.us22.list-manage.com/subscribe/post?u=10a38084e70d32fd8f1e585e6&amp;id=4513724bda&amp;f_id=003ed2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                            <form action="https://herokuapp.us22.list-manage.com/subscribe/post?u=10a38084e70d32fd8f1e585e6&amp;id=4513724bda&amp;f_id=003ed2e1f0" 
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
                                     <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
                                 <div id="mce-responses" class="clear foot">
                                     <div class="response" id="mce-error-response" style="display: none;"></div>
@@ -196,8 +192,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12">
-                    <a href="https://www.termsfeed.com/live/3aa27262-970c-4bd6-a37c-cc59c45deb72" target="_blank">Privacy Policy</a>
+                <div class="col-md-4 mb-4">
+                    <h2 class="h5">More Information</h2>
+                    <a href="https://www.termsfeed.com/live/3aa27262-970c-4bd6-a37c-cc59c45deb72" target="_blank"
+                        class="text-white d-block mb-2"><i class="fa-solid fa-user-lock"></i> Our Privacy Policy</a>
                 </div>
                             </form>
     </section>
