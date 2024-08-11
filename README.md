@@ -1,4 +1,4 @@
-# eCommerce: Teetime
+# eCommerce: EVLORE SHOPE
 
 ![Am I Responsive](/media/responsive1.png)
 

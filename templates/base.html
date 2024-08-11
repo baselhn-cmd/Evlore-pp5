@@ -54,15 +54,11 @@
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <label for="searchInput" class="sr-only">Search</label>
-                        <input id="searchInput" class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search">
+                        <input id="searchInput" class="form-control" type="text" name="q" placeholder="Search">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                                Search
-                            </button>
+                            <button class="form-control btn btn-black border border-black rounded-0" aria-label="Search" type="submit">
+                                <i class="fas fa-search"></i> Search
+                            </button>                             
                         </div>
                     </div>
                 </form>
