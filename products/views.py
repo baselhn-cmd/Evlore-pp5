@@ -8,6 +8,7 @@ from .forms import ProductForm
 
 # Create your views here.
 
+
 def all_products(request):
     """ Display all products, handle sorting, search queries,
     and category filtering. """
@@ -17,7 +18,6 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-
 
     if request.GET:
         if 'sort' in request.GET:
@@ -42,12 +42,13 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                                "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -58,7 +59,6 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
-
 
 
 def product_detail(request, product_id):
@@ -83,7 +83,7 @@ def add_product(request):
             request, "Only admin can add products"
         )
         return redirect(reverse("home"))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -107,7 +107,7 @@ def edit_product(request, product_id):
             request, "Only admin can add products"
         )
         return redirect(reverse("home"))
-    
+
     product = get_object_or_404(Product, id=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -123,6 +123,7 @@ def edit_product(request, product_id):
     }
     return render(request, 'products/edit_product.html', context)
 
+
 @login_required
 def delete_product(request, product_id):
     """
@@ -133,7 +134,7 @@ def delete_product(request, product_id):
             request, "Only admin can add products"
         )
         return redirect(reverse("home"))
-    
+
     product = get_object_or_404(Product, id=product_id)
     product.delete()
     messages.success(request, 'Product deleted successfully!')

@@ -3,14 +3,14 @@ from django.contrib import messages
 
 from products.models import Product
 
-def view_cart(request):
 
+def view_cart(request):
     """ View cart to render users added items """
     return render(request, 'cart/cart.html')
 
+
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart """
-    
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -25,6 +25,7 @@ def add_to_cart(request, item_id):
     print(cart)
 
     return redirect(redirect_url)
+
 
 def adjust_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
@@ -50,6 +51,7 @@ def adjust_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
+
 
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
