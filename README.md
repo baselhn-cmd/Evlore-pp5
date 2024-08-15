@@ -183,7 +183,7 @@ I used Balsamiq to create [wireframes](https://moqups.com/) for my project. It's
 The color I choose is white and violet.  
 <details><summary>See Color Palette</summary>
 
-![Color Palette](/media/color99.png)
+![Color Palette](/media/vio.png)
 </details>
 
 
@@ -482,6 +482,14 @@ JSHint javaScript Validation Service was used to validate all javaScript files.
 <details><summary>country_field.js</summary>
 
 ![jshint2](/media/jshint2%20(2).png)
+</details>
+
+### Wave Validation
+I use wave in home page no errors in login and register i could´t resolve the error because it´s allauth elements and folders and i didn´t finded solution
+
+<details><summary>Wave</summary>
+
+![Wave](/media/wave.png)
 </details>
 
 
