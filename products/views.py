@@ -6,6 +6,9 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .forms import ProductForm
 
+from django.views.generic import ListView, DetailView
+
+
 # Create your views here.
 
 
