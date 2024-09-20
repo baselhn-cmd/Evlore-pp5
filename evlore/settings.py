@@ -28,11 +28,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
             '8000-baselhncmd-evlorepp5-36b7uvv2204.ws.codeinstitute-ide.net',
-            'evlore-pp5-a96d6c1e75b5.herokuapp.com',
+            'evlore-pp5-a96d6c1e75b5.herokuapp.com', '8000-baselhncmd-evlorepp5-iifnnh7avt0.ws.codeinstitute-ide.net',
             'localhost']
 
 CSRF_TRUSTED_ORIGINS = [
