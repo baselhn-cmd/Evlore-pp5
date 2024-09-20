@@ -1,4 +1,12 @@
-/*
+/* eslint-disable esversion: 6 */
+
+if (typeof Stripe === 'undefined') {
+    var Stripe = {}; // Declare Stripe variable if it's not already defined
+}
+
+/*  
+Inspired from Boutiqe Ado
+
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
 
