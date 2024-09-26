@@ -106,6 +106,14 @@
             </div>
         </div>
     </div>
+    {% if request.user.is_authenticated %}
+    <h2>Leave a review</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ review_form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit review</button>
+    </form>
+{% endif %}
 {% endblock %}
 
 {% block postloadjs %}

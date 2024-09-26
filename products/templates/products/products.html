@@ -80,7 +80,7 @@
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
-                                                <small class="text-muted">No Rating</small>
+                                                <p>Average rating: {{ product.get_average_rating }} / 5</p>
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
@@ -91,6 +91,14 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="reviews">
+                                {% for review in product.reviews.all %}
+                                    <p>Rating: {{ review.rating }} / 5</p>
+                                    <p>Review: {{ review.content }}</p>
+                                    <p>Created by: {{ review.created_by.username }}</p>
+                                    <p>Created at: {{ review.created_at }}</p>
+                                {% endfor %}
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
@@ -123,6 +131,7 @@
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>
+
 {% endblock %}
 
 {% block postloadjs %}

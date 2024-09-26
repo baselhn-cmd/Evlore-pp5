@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Category(models.Model):
 
@@ -27,7 +28,20 @@ class Product(models.Model):
             max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-
+    
+    def get_average_rating(self):
+        reviews = self.reviews.all()
+        if reviews:
+            return sum(review.rating for review in reviews) / len(reviews)
+        else:
+            return 0
+    
     def __str__(self):
         return self.name
 
+class Review(models.Model):
+    Product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    rating = models.DecimalField(max_digits=3, decimal_places=2, default=3)
+    content = models.TextField()
+    created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)

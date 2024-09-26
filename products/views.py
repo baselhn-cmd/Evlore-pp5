@@ -5,7 +5,7 @@ from .models import Product, Category
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .forms import ProductForm
-
+from .forms import ReviewForm
 from django.views.generic import ListView, DetailView
 
 
@@ -68,9 +68,22 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.all()
+    review_form = ReviewForm()
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.Product = product
+            review.created_by = request.user
+            review.save()
+            return redirect('product_detail', product_id=product_id)
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': review_form,
     }
 
     return render(request, 'products/product_detail.html', context)
