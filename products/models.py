@@ -32,8 +32,9 @@ class Product(models.Model):
     def get_average_rating(self):
         reviews = self.reviews.all()
         if reviews:
-            return sum(review.rating for review in reviews) / len(reviews)
-        else:
+            # Convert the ratings to float for proper summing
+            total_ratings = sum(float(review.rating) for review in reviews)
+            return total_ratings / len(reviews)
             return 0
     
     def __str__(self):
@@ -45,3 +46,6 @@ class Review(models.Model):
     content = models.TextField()
     created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Review for {self.product.name} by {self.created_by.username}'
