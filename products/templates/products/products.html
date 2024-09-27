@@ -95,9 +95,6 @@
                             <div class="reviews">
                                 {% for review in product.reviews.all %}
                                     <p>Rating: {{ review.rating }} / 5</p>
-                                    <p>Review: {{ review.content }}</p>
-                                    <p>Created by: {{ review.created_by.username }}</p>
-                                    <p>Created at: {{ review.created_at }}</p>
                                 {% endfor %}
                             </div>
                         </div>
