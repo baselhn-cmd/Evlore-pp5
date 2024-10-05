@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Category(models.Model):
 
     class Meta:
@@ -28,7 +29,7 @@ class Product(models.Model):
             max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    
+
     def get_average_rating(self):
         reviews = self.reviews.all()
         if reviews:
@@ -36,26 +37,32 @@ class Product(models.Model):
             total_ratings = sum(float(review.rating) for review in reviews)
             return total_ratings / len(reviews)
             return 0
-    
+
     def __str__(self):
         return self.name
 
+
 class Wishlist(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='wishlists')
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='wishlists')
+    user = models.ForeignKey(
+            User, on_delete=models.CASCADE, related_name='wishlists')
+    product = models.ForeignKey(
+            Product, on_delete=models.CASCADE, related_name='wishlists')
     added_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('user', 'product')  # Ensure that a user can only add a product once to their wishlist
+        unique_together = ('user', 'product')
 
     def __str__(self):
         return f"{self.user.username} - {self.product.name}"
 
+
 class Review(models.Model):
-    Product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    Product = models.ForeignKey(
+            Product, related_name='reviews', on_delete=models.CASCADE)
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=3)
     content = models.TextField()
-    created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
+    created_by = models.ForeignKey(
+            User, related_name='reviews', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

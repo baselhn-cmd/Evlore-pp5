@@ -16,7 +16,7 @@ from django.views.generic import ListView, DetailView
 def all_products(request):
     """ Display all products, handle sorting, search queries,
     and category filtering. """
-    
+
     products = Product.objects.all()
     query = None
     categories = None
@@ -24,7 +24,8 @@ def all_products(request):
     direction = None
 
     # Fetch user's wishlist products
-    wishlist_products = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
+    wishlist_products = Wishlist.objects.filter(
+            user=request.user).values_list('product_id', flat=True)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -49,7 +50,8 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                                "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -62,16 +64,19 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'wishlist_products': wishlist_products,  # Pass wishlist products to the template
+        'wishlist_products': wishlist_products,
     }
 
     return render(request, 'products/products.html', context)
+
+
 def toggle_wishlist(request):
     if request.user.is_authenticated:
         product_id = request.POST.get('product_id')
         product = Product.objects.get(id=product_id)
-        
-        wishlist_item, created = Wishlist.objects.get_or_create(user=request.user, product=product)
+
+        wishlist_item, created = Wishlist.objects.get_or_create(
+            user=request.user, product=product)
 
         if not created:
             # If the item already exists, delete it (remove from wishlist)
@@ -79,9 +84,10 @@ def toggle_wishlist(request):
             in_wishlist = False
         else:
             in_wishlist = True
-        
+
         return JsonResponse({'in_wishlist': in_wishlist})
     return JsonResponse({'error': 'User not authenticated'}, status=403)
+
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
@@ -132,6 +138,7 @@ def add_product(request):
         request, 'products/add_product.html', {
             'form': form, 'products': products})
 
+
 @login_required
 def edit_product(request, product_id):
     """
@@ -174,6 +181,8 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted successfully!')
     return redirect('add_product')
+
+
 def submit_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
@@ -190,7 +199,8 @@ def submit_review(request, product_id):
                 created_by=request.user
             )
             review.save()
-            messages.success(request, 'Your review has been submitted successfully!')
+            messages.success(request,
+                             'Your review has been submitted successfully!')
         else:
             messages.error(request, 'Please provide a review.')
 

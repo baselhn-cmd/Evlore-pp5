@@ -2,6 +2,7 @@ from django import forms
 from .models import Product
 from .models import Review
 
+
 class ProductForm(forms.ModelForm):
     """
     Show all fields from product model,
@@ -10,6 +11,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
+
 
 class ReviewForm(forms.ModelForm):
     class Meta:
