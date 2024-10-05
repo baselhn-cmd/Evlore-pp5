@@ -40,6 +40,17 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+class Wishlist(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='wishlists')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='wishlists')
+    added_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'product')  # Ensure that a user can only add a product once to their wishlist
+
+    def __str__(self):
+        return f"{self.user.username} - {self.product.name}"
+
 class Review(models.Model):
     Product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=3)
@@ -48,4 +59,4 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'Review for {self.product.name} by {self.created_by.username}'
+        return f'{self.content} - {self.created_by.username}'

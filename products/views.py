@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import JsonResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Product, Category
+from .models import *
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .forms import ProductForm
@@ -15,12 +16,15 @@ from django.views.generic import ListView, DetailView
 def all_products(request):
     """ Display all products, handle sorting, search queries,
     and category filtering. """
-
+    
     products = Product.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
+
+    # Fetch user's wishlist products
+    wishlist_products = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -45,8 +49,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request,
-                                "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -59,10 +62,26 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'wishlist_products': wishlist_products,  # Pass wishlist products to the template
     }
 
     return render(request, 'products/products.html', context)
+def toggle_wishlist(request):
+    if request.user.is_authenticated:
+        product_id = request.POST.get('product_id')
+        product = Product.objects.get(id=product_id)
+        
+        wishlist_item, created = Wishlist.objects.get_or_create(user=request.user, product=product)
 
+        if not created:
+            # If the item already exists, delete it (remove from wishlist)
+            wishlist_item.delete()
+            in_wishlist = False
+        else:
+            in_wishlist = True
+        
+        return JsonResponse({'in_wishlist': in_wishlist})
+    return JsonResponse({'error': 'User not authenticated'}, status=403)
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
@@ -155,3 +174,26 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted successfully!')
     return redirect('add_product')
+def submit_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        rating = request.POST.get('rating', 3)  # Default to 3 if not provided
+        review_content = request.POST.get('review')
+
+        if review_content:  # Ensure the review content is provided
+            # Create a new review object
+            review = Review.objects.create(
+                Product=product,
+                rating=rating,
+                content=review_content,
+                created_by=request.user
+            )
+            review.save()
+            messages.success(request, 'Your review has been submitted successfully!')
+        else:
+            messages.error(request, 'Please provide a review.')
+
+        return redirect('product_detail', product_id=product.id)
+
+    return render(request, 'product_detail.html', {'product': product})
