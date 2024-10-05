@@ -152,33 +152,63 @@
             }
         })
 
-        // Wishlist Icon Functionality
-        $(document).ready(function() {
-            $('.wishlist-icon').click(function(e) {
-                e.preventDefault(); // Prevent default anchor click behavior
-                const productId = $(this).data('product-id');
+        // Function to get CSRF token from cookies
+    // Function to get CSRF token from cookies
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
 
-                // Send AJAX request to add/remove product from wishlist
-                $.ajax({
-                    url: '{% url "toggle_wishlist" %}',  // Replace with your URL endpoint
-                    method: 'POST',
-                    data: {
-                        'product_id': productId,
-                        'csrfmiddlewaretoken': '{{ csrf_token }}' // Add CSRF token for safety
-                    },
-                    success: function(response) {
-                        // Update the icon based on success response
-                        if (response.in_wishlist) {
-                            $(this).find('i').removeClass('text-muted').addClass('text-danger'); // Change to red
-                        } else {
-                            $(this).find('i').removeClass('text-danger').addClass('text-muted'); // Change back to gray
-                        }
-                    }.bind(this), // Keep the correct context for 'this'
-                    error: function() {
-                        alert('Error toggling wishlist. Please try again.');
-                    }
-                });
-            });
+const csrftoken = getCookie('csrftoken');
+
+// Ensure CSRF token is added to every AJAX request's headers
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
+$(document).ready(function() {
+    // Wishlist Icon Functionality
+    $('.wishlist-icon').click(function(e) {
+        e.preventDefault(); // Prevent default anchor click behavior
+        const productId = $(this).data('product-id');
+        const icon = $(this).find('i');  // Store the current icon for updating
+
+        // Send AJAX request to add/remove product from wishlist
+        $.ajax({
+            url: '{% url "toggle_wishlist" %}',  // Replace with the correct URL endpoint
+            method: 'POST',
+            data: {
+                'product_id': productId,
+            },
+            success: function(response) {
+                // Update the icon based on success response
+                if (response.in_wishlist) {
+                    icon.removeClass('text-muted').addClass('text-danger'); // Change to red
+                } else {
+                    icon.removeClass('text-danger').addClass('text-muted'); // Change back to gray
+                }
+            },
+            error: function() {
+                alert('Error toggling wishlist. Please try again.');
+            }
         });
+    });
+});
+
+
     </script>
 {% endblock %}

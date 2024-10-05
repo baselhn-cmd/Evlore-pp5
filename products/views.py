@@ -23,9 +23,13 @@ def all_products(request):
     sort = None
     direction = None
 
-    # Fetch user's wishlist products
-    wishlist_products = Wishlist.objects.filter(
+    # Check if the user is authenticated before fetching wishlist
+    if request.user.is_authenticated:
+        wishlist_products = Wishlist.objects.filter(
             user=request.user).values_list('product_id', flat=True)
+    else:
+        # For anonymous users, return an empty list for wishlist products
+        wishlist_products = []
 
     if request.GET:
         if 'sort' in request.GET:
@@ -68,6 +72,7 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
 
 
 def toggle_wishlist(request):
