@@ -55,7 +55,7 @@ def all_products(request):
             query = request.GET['q']
             if not query:
                 messages.error(request,
-                               "You didn't enter any search criteria!")
+                                "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -204,7 +204,7 @@ def submit_review(request, product_id):
             )
             review.save()
             messages.success(request,
-                             'Your review has been submitted successfully!')
+                            'Your review has been submitted successfully!')
         else:
             messages.error(request, 'Please provide a review.')
 
